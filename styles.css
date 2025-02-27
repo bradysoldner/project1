@@ -1,5 +1,85 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
 }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    border-bottom: 1px solid #e5e7eb;
+	justify-content: center;
+	font-size: 1.25rem;
+	font-family: 'Montserrat', sans-serif;
+}
+
+/* .nav-links {
+    display: flex;
+    gap: 20px;
+} */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.hero .hero-background-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.8;
+	z-index: -1;
+}
+
+.destinations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: white;
+}
+
+.destination-card {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    width: 300px;
+}
+
+.experiences {
+    background-color: #f3f4f6;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.experience {
+    background-color: white;
+    width: 350px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* #japan-button{
+    box-sizing: border-box;
+    background-color: pink;
+    border-color: skyblue;
+    border-width: .25rem;
+    border-radius: 1.5rem;
+    width: 7.5rem;
+    height: 2.5rem;
+    box-shadow: .25rem .25rem .25rem skyblue;
+
+}
+
+.japan-button:hover{
+    transform: scale(1.25);
+} */
