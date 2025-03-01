@@ -8,10 +8,9 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: white;
-    border-bottom: 1px solid #e5e7eb;
-	justify-content: center;
-	font-size: 1.25rem;
+    /* background-color: white; */
+    border: 1px solid #e5e7eb;
+	font-size: 1rem;
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -83,3 +82,77 @@ img {
 .japan-button:hover{
     transform: scale(1.25);
 } */
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.footer-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-section {
+	margin-bottom: 2rem;
+}
+
+.footer-section-tag-line {
+	color: #aaa;
+	margin-top: 0.5rem;
+}
+
+.footer-links h3 {
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+}
+
+.footer-links ul {
+	list-style: none;
+}
+
+.footer-links li {
+	margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+	color: #ccc;
+	text-decoration: none;
+}
+
+.social-placeholder {
+	display: flex;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.social-icon {
+	width: 30px;
+	height: 30px;
+	/* background-color: #666; */
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.social-icon:hover{
+	cursor: pointer;
+}
+
+.footer-bottom {
+	border-top: 1px solid #555;
+	margin-top: 2rem;
+	padding-top: 1.5rem;
+	text-align: center;
+	font-size: 0.875rem;
+	color: #aaa;
+}
+
+.footer-bottom a {
+	color: #aaa;
+	text-decoration: none;
+	margin: 0 0.5rem;
+}

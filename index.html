@@ -19,17 +19,18 @@
 
     <body>
         <!-- Header -->
-        <header class="header">
+        <header class="header bg-rose-300" id="top">
             <div class="logo">
                 <a href="#">
                     <h1>Jordan 1 Shoes</h1>
                 </a>
             </div>
-            <!-- <nav class="nav-links">
-                <a href="#">Destinations</a>
-                <a href="#">Experiences</a>
-                <a href="#">Contact</a>
-            </nav> -->
+            <nav class="nav-links">
+                <a href="https://www.nike.com/jordan" target="_blank" class="p-2">Jordan</a>
+                <a href="#chicagos" class="p-2">Chicagos</a>
+                <a href="#similar-products" class="p-2">Similar Products</a>
+                <a href="#" class="w-3 h-4"><i class="fa-solid fa-circle-user"></i></a>
+            </nav>
         </header>
     
         <!-- Hero Section -->
@@ -41,83 +42,150 @@
             <!-- STYLE THIS BUTTON WITH VANILLA CSS THEN ALTER THE STYLES TO TAILWIND CLASSES -->
             <a href="https://www.nike.com/w/mens-jordan-1-shoes-4fokyznik1zy7ok" target="_blank"
         class="bg-rose-300 text-slate-950 border-2 border-black rounded-lg py-4 px-6 shadow-md hover:bg-rose-900 hover:text-slate-50 hover:cursor-pointer inline-block text-center">
-        More About Jordan 1s
-</a>
-
-
-        
-    
+        See More Jordan 1s</a>
         </div>
-    
-        <!-- Destinations Section -->
-        <section class="flex flex-wrap gap-5 bg-white justify-center my-32" id="destinations">
-            <div class="bg-slate-50 w-72 border-1 border-slate-200 flex-col gap-4 rounded-lg overflow-hidden">
-                <div class="overflow-hidden h-48">
-                    <img src="920714_00.png.png"
-                    alt="Air Jordan 1 Chicagos">
+
+    <div class="flex w-full" id="chicagos">
+        <section class="w-1/2 flex justify-center items-center p-8">
+            <img src="chicago-two-removebg.png" alt="A picture of a pair of Jordan 1 Chicagos" class="mr-40">
+        </section>
+
+            <section class="w-1/2 flex flex-col justify-start p-8">
+                <p class="text-lg font-semibold">Product Features</p>
+                <ul class="list-disc list-inside text-lg text-left mb-4">
+                    <li>Classic red, white, and black colorway inspired by the Chicago Bulls</li>
+                    <li>Iconic high-top silhouette for a timeless look</li>
+                    <li>Premium leather upper for durability and style</li>
+                    <li>Padded ankle collar for extra support</li>
+                    <li>Cushioned insole for all-day comfort</li>
+                    <li>Breathable perforations in the toe box</li>
+                    <li>Sturdy rubber outsole for excellent traction</li>
+                    <li>Air-Sole unit in the heel for impact protection</li>
+                    <li>Double stitching for long-lasting wear</li>
+                    <li>First-ever signature shoe for Michael Jordan</li>
+                    <li>Worn during MJ’s rookie season in 1985</li>
+                    <li>A staple in sneaker culture and streetwear</li>
+                </ul>
+                <div class="flex flex-wrap gap-5" id="destinations">
+                    <div class="bg-slate-50 w-72 border border-slate-200 flex flex-col gap-4 rounded-lg overflow-hidden">
+                        <div class="h-52 overflow-hidden">
+                            <img src="chicago-single.png" alt="Air Jordan 1 Chicagos" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex flex-col gap-4 px-4 pb-4">
+                            <h3>Air Jordan 1 Chicago</h3>
+                            <button class="bg-rose-300 text-slate-900 w-fit px-4 py-2 rounded">Learn More</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex flex-col gap-4 px-4">
-                    <h3>Air Jordan 1 Chicago</h3>
-                    <p>A classic and cool looking colorway with the colors of Michael Jordan's Chicago Bulls.</p>
-                    <button class="mb-4 bg-rose-200 text-slate-900 w-fit px-4">Learn More</button>
-                </div>
-            </div>
-            <!-- "destination-card" -->
-            <div class="bg-slate-50 w-72 border-1 border-slate-200 flex-col gap-4 rounded-lg overflow-hidden">
-                <div class="overflow-hidden h-48">
-                    <img src="unchigh.png"
+            </section>
+        </div>
+
+        <section class="flex flex-wrap justify-evenly mt-8">
+            <p class="w-full text-2xl font-bold mb-4 pl-10">Similar Products <i class="fa-solid fa-cart-shopping"></i></p>
+             <!-- "card" -->
+            <div class="bg-slate-50 w-60 border border-slate-200 flex flex-col gap-4 rounded-lg overflow-hidden p-4">
+                <div class="overflow-hidden h-56 content-center">
+                    <img src="university-blue-removebg.png"
                     alt="Air Jordan 1 University Blues">
                 </div>
-                <div class="flex flex-col gap-4 px-4">
+                <div class="flex flex-col flex-grow justify-between gap-4">
                     <h3>Air Jordan 1 University Blues</h3>
-                    <p>This colorway is inspired by Michale Jordan's alma mater, the University of North Carolina.</p>
-                    <button class="mb-4 bg-rose-200 text-slate-900 w-fit px-4">Learn More</button>
+                    <p class="flex-grow">This colorway is inspired by Michael Jordan's alma mater, the University of North Carolina.</p>
+                    <button class="bg-rose-300 text-slate-900 w-fit px-4 py-2 rounded-md justify-start">Learn More</button>
                 </div>
             </div>
-            <!-- "destination-card" -->
-
-            <div class="bg-slate-50 w-72 border-1 border-slate-200 flex-col gap-4 rounded-lg overflow-hidden">
-                <div class="overflow-hidden h-48">
-                    <img src="my4C15tT5YeupP6LCt5kBySf.png"
+             <!-- "-card"  -->
+            <div class="bg-slate-50 w-60 border border-slate-200 flex flex-col gap-4 rounded-lg overflow-hidden p-4">
+                <div class="overflow-hidden h-56 content-center">
+                    <img src="black-and-white.png"
                     alt="Air Jordan 1 Black and Whites">
                 </div>
-                <div class="flex flex-col gap-4 px-4">
-                    <h3>Air Jordan 1 Black and Whites</h3>
-                    <p>One of the best color combinations, this black and white colorway looks great with any colors</p>
-                    <button class="mb-4 bg-rose-200 text-slate-900 w-fit px-4">Learn More</button>
+                <div class="flex flex-col flex-grow justify-between gap-4">
+                    <h3>Air Jordan 1 Black and White</h3>
+                    <p class="flex-grow">One of the best color combinations, this black and white colorway looks great with any colors.</p>
+                    <button class="bg-rose-300 text-slate-900 w-fit px-4 py-2 rounded-md justify-start">Learn More</button>
                 </div>
             </div>
-        </section>
-    
-        <!-- Experiences Section -->
-        <!-- <section class="experiences" id="experiences">
-            <div class="experience">
-                <img src="https://images.pexels.com/photos/5970828/pexels-photo-5970828.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    alt="Traveler 1" class="avatar">
-                <blockquote>
-                    "The cherry blossom festival in Osaka was magical. The whole city turns pink!"
-                </blockquote>
-                <cite>- Emma Wilson, Food Blogger</cite>
+            <!-- "card" -->
+            <div class="bg-slate-50 w-60 border border-slate-200 flex flex-col gap-4 rounded-lg overflow-hidden p-4">
+                <div class="overflow-hidden h-56 content-center">
+                    <img src="hyper-royale.jpg"
+                    alt="Air Jordan 1 Hyper Royal">
+                </div>
+                <div class="flex flex-col flex-grow justify-between gap-4">
+                    <h3>Air Jordan 1 Hyper Royal</h3>
+                    <p class="flex-grow">With a faded blue suede upper, this pair offers a vintage yet stylish look for any sneakerhead.</p>
+                    <button class="bg-rose-300 text-slate-900 w-fit px-4 py-2 rounded-md justify-start">Learn More</button>
+                </div>
             </div>
-    
-            <div class="experience">
-                <img src="https://images.pexels.com/photos/30831530/pexels-photo-30831530/free-photo-of-lakefront-photography-session-in-indonesia.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    alt="Traveler 2" class="avatar">
-                <blockquote>
-                    "Staying in a traditional ryokan in Hakone was the highlight of our trip."
-                </blockquote>
-                <cite>- Alex Chen, Travel Photographer</cite>
+            <!-- "card" -->
+            <div class="bg-slate-50 w-60 border border-slate-200 flex flex-col gap-4 rounded-lg overflow-hidden p-4">
+                <div class="overflow-hidden h-56 content-center">
+                    <img src="smoke-grey-removebg.png"
+                    alt="Air Jordan 1 Smoke Grey">
+                </div>
+                <div class="flex flex-col flex-grow justify-between gap-4">
+                    <h3>Air Jordan 1 Smoke Grey</h3>
+                    <p class="flex-grow">A sleek mix of grey, black, and white, making it a versatile choice for any outfit.</p>
+                    <button class="bg-rose-300 text-slate-900 w-fit px-4 py-2 rounded-md justify-start">Learn More</button>
+                </div>
             </div>
-    
-            <div class="experience">
-                <img src="https://images.pexels.com/photos/30847193/pexels-photo-30847193/free-photo-of-woman-overlooking-london-skyline-with-the-shard.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    alt="Traveler 3" class="avatar">
-                <blockquote>
-                    "The sushi in Tsukiji Market was the freshest I've ever tasted. A must-visit for foodies!"
-                </blockquote>
-                <cite>- Beryl Sharp, Travel Writer</cite>
+            <!-- "card" -->
+            <div class="bg-slate-50 w-60 border border-slate-200 flex flex-col gap-4 rounded-lg overflow-hidden p-4">
+                <div class="overflow-hidden h-56 content-center">
+                    <img src="court-purple-removebg.png"
+                    alt="Air Jordan 1 Black and Whites">
+                </div>
+                <div class="flex flex-col flex-grow justify-between gap-4">
+                    <h3>Air Jordan 1 Court Purple</h3>
+                    <p class="flex-grow">A bold purple and white combination that makes a statement while maintaining a classic AJ1 look.</p>
+                    <button class="bg-rose-300 text-slate-900 w-fit px-4 py-2 rounded-md justify-start">Learn More</button>
+                </div>
+            </div>  
         </section>
-    </body> -->
-
-
+        <!-- I asked chat gpt: each card has a description in a p tag, but the bottom three arent complete. complete the bottom three -->
+    
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-section footer-links">
+                        <h3 class="mt-24">Quick Links</h3>
+                        <ul>
+                            <li><a href="#top">Back to Top</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Activities</a></li>
+                            <li><a href="#">Conservation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Connect With Us</h3>
+                        <div class="social-placeholder">
+                            <a href="https://www.youtube.com/c/jordan" target="_blank"><div class="social-icon bg-rose-300">
+                                <i class="fa-brands fa-youtube"></i>
+                            </div></a>
+                            <a href="https://www.facebook.com/jumpman23/" target="_blank"><div class="social-icon bg-rose-300">
+                                <i class="fa-brands fa-facebook"></i>
+                            </div></a>
+                            <a href="https://www.instagram.com/jumpman23/?hl=en" target="_blank"><div class="social-icon bg-rose-300">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div></a>
+                            <a href="https://x.com/jumpman23?lang=en" target="_blank"><div class="social-icon bg-rose-300">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </div></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="footer-bottom">
+                    <p>© 2025 Brady Soldner Jordans. All rights reserved.</p>
+                    <div>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+    </body>
 </html>
