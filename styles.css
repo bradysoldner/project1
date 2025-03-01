@@ -1,6 +1,11 @@
+html{
+	scroll-behavior: smooth;
+}
+/* I asked chat gpt: how to implement smooth scrolling */
+
 body {
     margin: 0;
-    font-family: system-ui, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .header {
@@ -8,25 +13,22 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    /* background-color: white; */
     border: 1px solid #e5e7eb;
 	font-size: 1rem;
-	font-family: 'Montserrat', sans-serif;
+	position: sticky;
+	top: 0;
+    z-index: 1000; 
 }
 
-/* .nav-links {
-    display: flex;
-    gap: 20px;
-} */
 
-.hero {
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 90vh;
 }
 
-.hero .hero-background-video {
+.main .main-background-video {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -37,51 +39,12 @@ body {
 	z-index: -1;
 }
 
-.destinations {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    background-color: white;
-}
-
-.destination-card {
-    background-color: #f9fafb;
-    border: 1px solid #e5e7eb;
-    width: 300px;
-}
-
-.experiences {
-    background-color: #f3f4f6;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.experience {
-    background-color: white;
-    width: 350px;
-}
 
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* #japan-button{
-    box-sizing: border-box;
-    background-color: pink;
-    border-color: skyblue;
-    border-width: .25rem;
-    border-radius: 1.5rem;
-    width: 7.5rem;
-    height: 2.5rem;
-    box-shadow: .25rem .25rem .25rem skyblue;
-
-}
-
-.japan-button:hover{
-    transform: scale(1.25);
-} */
 
 .container {
 	width: 90%;
@@ -131,7 +94,6 @@ img {
 .social-icon {
 	width: 30px;
 	height: 30px;
-	/* background-color: #666; */
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
@@ -156,3 +118,78 @@ img {
 	text-decoration: none;
 	margin: 0 0.5rem;
 }
+
+
+#similar-products a:hover{
+	transform: scale(1.25);
+}
+
+#chicagos a:hover{
+	transform: scale(1.25);
+}
+
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* User icon circle */
+.user-icon .circle-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Circle shape */
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* User icon circle */
+.user-icon .circle-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Circle shape */
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 160px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show dropdown when hovering over the parent (icon or menu) */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Ensure the dropdown stays open when hovering over the content itself */
+.dropdown-content:hover {
+    display: block;
+}
+/* I asked chat gpt: how do I make the a tag with the circle user in it a drop down menu */
