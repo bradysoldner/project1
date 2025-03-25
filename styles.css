@@ -92,7 +92,6 @@ body {
     z-index: -1;
 }
 
-/* Images */
 img {
     max-width: 100%;
     height: auto;
@@ -126,7 +125,6 @@ img {
     width: 100%;
 }
 
-/* Shoe container in grid */
 .shoe-container {
     display: grid;
     gap: 20px;
@@ -142,19 +140,12 @@ img {
 .shoe-card-emphasize {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Ensure children are aligned at the top */
-    align-items: flex-start; /* Align items to the start (top) */
+    justify-content: flex-start; 
+    align-items: flex-start; 
     width: 100%;
 }
 
-/* Specific image container in #similar-products */
-#similar-products .shoe-card-emphasize .overflow-hidden.h-56 {
-    height: auto; /* Allow height to adjust automatically */
-    max-height: 400px; /* Optional: set a max height */
-    overflow: hidden;
-    display: grid;
-    align-content: center;
-}
+
 
 #similar-products .shoe-card-emphasize .overflow-hidden.h-56 img {
     width: 100%;
@@ -164,9 +155,9 @@ img {
 /* Image styling */
 .shoe-card-emphasize img {
     object-fit: cover;
-    object-position: top; /* Align image at the top */
-    width: 100%; /* Full width of container */
-    height: 100%; /* Full height of container */
+    object-position: top; 
+    width: 100%; 
+    height: 100%; 
 }
 
 /* Footer */
@@ -245,7 +236,6 @@ img {
     margin: 0 0.5rem;
 }
 
-/* Hover Scaling */
 #similar-products a:hover,
 #chicago-style a:hover {
     transform: scale(1.25);
@@ -292,7 +282,6 @@ img {
     display: block;
 }
 
-/* Animation for Shoe Cards */
 @keyframes emphasize {
     0% { transform: scale(1.0); }
     50% { transform: scale(1.1); }
@@ -312,7 +301,6 @@ img {
     animation: shake 1.5s ease-in 1;
 }
 
-/* Main Layout */
 main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -320,7 +308,6 @@ main {
     padding: 20px;
 }
 
-/* Section Styling */
 section {
     padding: 15px;
     border-radius: 10px;
@@ -333,7 +320,6 @@ section img {
     border-radius: 5px;
 }
 
-/* Container */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -341,9 +327,8 @@ section img {
     padding: 0 20px;
 }
 
-/* Media Queries */
 
-/* Mobile (up to 480px) */
+/* up to 480px */
 @media screen and (max-width: 480px) {
     .header {
         padding: 0.5rem;
@@ -412,7 +397,7 @@ section img {
     }
 }
 
-/* Tablet (481px to 767px) */
+/* 481px to 767px */
 @media screen and (min-width: 481px) and (max-width: 767px) {
     .header {
         padding: 0.75rem;
@@ -445,7 +430,7 @@ section img {
     }
 }
 
-/* Desktop (768px to 1279px) */
+/* 768px to 1279px */
 @media screen and (min-width: 768px) and (max-width: 1279px) {
     .header {
         padding: 1rem;
@@ -469,7 +454,7 @@ section img {
     }
 }
 
-/* Desktop (1280px and up) */
+/* 1280px and up */
 @media screen and (min-width: 1280px) {
     #similar-products .shoe-card-emphasize .overflow-hidden.h-56 {
         height: 14rem;
