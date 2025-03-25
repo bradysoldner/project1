@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordan 1s</title>
+    <title> Practi</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
                 </a>
             </div>
 
-        <nav>
+        <nav role="navigation" aria-label="Main Navigation">
             <div class="dropdown">
                 <a href="#" class="user-icon">
                     <i class="fa-solid fa-bars"></i>
@@ -36,10 +36,14 @@
                     <a href="https://www.nike.com/jordan" target="_blank" class="p-2">Jordan Brand</a>
                     <a href="#chicagos" class="p-2">Chicagos</a>
                     <a href="#similar-products" class="p-2">Similar Products</a>
+                    <button id="dark-mode-toggle" class="bg-rose-300 p-2 rounded-full">
+                        <i class="fa-solid fa-moon"></i> <!-- Default moon icon -->
+                </button>
+                <!-- 3/24 I asked chat gpt: how could i create a dark mode toggle in my css -->
                 </div>
             </div>
-         </nav>
-         <!-- I asked chat gpt: how do I make the a tag with the circle user in it a drop down menu -->
+         </nav>        
+
 
         </header>
     
@@ -50,12 +54,12 @@
                 Your browser does not support the video tag.
             </video>
             <a href="https://www.nike.com/w/mens-jordan-1-shoes-4fokyznik1zy7ok" target="_blank"
-        class="bg-rose-300 text-slate-950 border-2 border-black rounded-lg py-4 px-6 shadow-md inline-block text-center">
+        class="bg-rose-300 text-slate-950 border-2 border-black rounded-lg py-4 px-6 shadow-md inline-block text-center" role="button">
         See More Jordan 1s</a>
         </div>
 
-        <div class="flex w-full mt-8" id="chicagos">
-            <section class="w-1/2 flex justify-center items-center p-8">
+        <div class="flex w-full mt-8" id="chicago-style">
+            <section class="w-1/2 p-8">
                 <img src="chicago-two-removebg.png" alt="A picture of a pair of Jordan 1 Chicagos" class="mr-40">
             </section>
 
@@ -75,15 +79,14 @@
                     <li>Worn during MJ’s rookie season in 1985</li>
                     <li>A staple in sneaker culture and streetwear</li>
                 </ul>
-                <!-- I asked chat gpt: give me a list of product features I could put for air jordan 1 chicagos -->
                 <div class="flex flex-wrap gap-5 justify-center">
                     <div class="shoe-card-emphasize bg-slate-50 w-72 border border-slate-200 flex flex-col gap-4 rounded-lg overflow-hidden">
                         <div class="h-52 overflow-hidden">
-                            <img src="chicago-single.png" alt="Air Jordan 1 Chicagos" class="w-full h-full object-cover">
-                        </div>
+                            <img src="chicago-single.png" alt="Air Jordan 1 Chicagos" class="w-full h-full object-cover object-top">
+                        </div>                        
                         <div class="flex flex-col gap-4 px-4 pb-4">
                             <h3>Air Jordan 1 Chicago</h3>
-                            <a href="https://www.nike.com/launch/t/air-jordan-1-chicago" target="_blank" class="bg-rose-300 w-fit px-4 py-2 rounded">Learn More</a>
+                            <a href="https://www.nike.com/launch/t/air-jordan-1-chicago" target="_blank" class="bg-rose-300 w-fit px-4 py-2 rounded" role="button">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -91,8 +94,8 @@
         </div>
 
         <section class="flex-wrap justify-evenly mt-8" id="similar-products">
-            <p class="w-full text-2xl font-bold mb-4 pl-10">Similar Products <i class="fa-solid fa-cart-shopping"></i></p>
-            <div class="shoe-container">
+            <p class="w-full text-2xl font-bold mb-4 pl-10">Similar Products <i class="fa-solid fa-cart-shopping animate-shake"></i></p>
+            <div class="shoe-container shoe-wrapper">
              <!-- "card" -->
             <div class="shoe-card-emphasize bg-slate-50 w-60 border border-slate-200 flex flex-col gap-4 rounded-lg overflow-hidden p-4">
                 <div class="overflow-hidden h-56 content-center">
@@ -102,7 +105,7 @@
                 <div class="flex flex-col flex-grow justify-between gap-4">
                     <h3>Air Jordan 1 University Blues</h3>
                     <p class="flex-grow">This colorway is inspired by Michael Jordan's alma mater, the University of North Carolina.</p>
-                    <a href="https://www.nike.com/in/launch/t/air-jordan-1-university-blue" target="_blank" class="bg-rose-300 text-slate-900 w-fit px-4 py-2 rounded-md justify-start">Learn More</a>
+                    <a href="https://www.nike.com/in/launch/t/air-jordan-1-university-blue" target="_blank" class="bg-rose-300 text-slate-900 w-fit px-4 py-2 rounded-md justify-start" role="button">Learn More</a>
                 </div>
             </div>
              <!-- "-card"  -->
@@ -114,7 +117,7 @@
                 <div class="flex flex-col flex-grow justify-between gap-4">
                     <h3>Air Jordan 1 Black and White</h3>
                     <p class="flex-grow">One of the best color combinations, this black and white colorway looks great with any colors.</p>
-                    <a href="https://www.nike.com/t/air-jordan-1-mid-mens-shoes-X5pM09/DQ8426-010?nikemt=true&cp=68540849105_search_--x-20389285806---c-1015653885-00197859349067&dplnk=member&gad_source=1&gclid=Cj0KCQiA_Yq-BhC9ARIsAA6fbAjTfw8tf67Ozfqvmo3XS3ChnKTcib8lbnmjJ_swI5wtHWxmHIdX3MQaAr0FEALw_wcB&gclsrc=aw.ds" target="_blank" class="bg-rose-300 text-slate-900 w-fit px-4 py-2 rounded-md justify-start hover:scale-125">Learn More</a>
+                    <a href="https://www.nike.com/t/air-jordan-1-mid-mens-shoes-X5pM09/DQ8426-010?nikemt=true&cp=68540849105_search_--x-20389285806---c-1015653885-00197859349067&dplnk=member&gad_source=1&gclid=Cj0KCQiA_Yq-BhC9ARIsAA6fbAjTfw8tf67Ozfqvmo3XS3ChnKTcib8lbnmjJ_swI5wtHWxmHIdX3MQaAr0FEALw_wcB&gclsrc=aw.ds" target="_blank" class="bg-rose-300 text-slate-900 w-fit px-4 py-2 rounded-md justify-start hover:scale-125" role="button">Learn More</a>
                 </div>
             </div>
             <!-- "card" -->
@@ -126,7 +129,7 @@
                 <div class="flex flex-col flex-grow justify-between gap-4">
                     <h3>Air Jordan 1 Hyper Royal</h3>
                     <p class="flex-grow">With a faded blue suede upper, this pair offers a vintage yet stylish look for any sneakerhead.</p>
-                    <a href="https://www.nike.com/in/launch/t/air-jordan-1-hyper-royal" target="_blank" class="bg-rose-300 text-slate-900 w-fit px-4 py-2 rounded-md justify-start hover:scale-125">Learn More</a>
+                    <a href="https://www.nike.com/in/launch/t/air-jordan-1-hyper-royal" target="_blank" class="bg-rose-300 text-slate-900 w-fit px-4 py-2 rounded-md justify-start hover:scale-125" role="button">Learn More</a>
                 </div>
             </div>
             <!-- "card" -->
@@ -138,7 +141,7 @@
                 <div class="flex flex-col flex-grow justify-between gap-4">
                     <h3>Air Jordan 1 Smoke Grey</h3>
                     <p class="flex-grow">A sleek mix of grey, black, and white, making it a versatile choice for any outfit.</p>
-                    <a href="https://stockx.com/air-jordan-1-mid-light-smoke-grey" target="_blank" class="bg-rose-300 text-slate-900 w-fit px-4 py-2 rounded-md justify-start hover:scale-125">Learn More</a>
+                    <a href="https://stockx.com/air-jordan-1-mid-light-smoke-grey" target="_blank" class="bg-rose-300 text-slate-900 w-fit px-4 py-2 rounded-md justify-start hover:scale-125" role="button">Learn More</a>
                 </div>
             </div>
             <!-- "card" -->
@@ -150,13 +153,11 @@
                 <div class="flex flex-col flex-grow justify-between gap-4">
                     <h3>Air Jordan 1 Court Purple</h3>
                     <p class="flex-grow">A bold purple and white combination that makes a statement while maintaining a classic look.</p>
-                    <a href="https://stockx.com/air-jordan-1-retro-high-court-purple-white" target="_blank" class="bg-rose-300 text-slate-900 w-fit px-4 py-2 rounded-md justify-start hover:scale-125">Learn More</a>
+                    <a href="https://stockx.com/air-jordan-1-retro-high-court-purple-white" target="_blank" class="bg-rose-300 text-slate-900 w-fit px-4 py-2 rounded-md justify-start hover:scale-125" role="button">Learn More</a>
                 </div>
             </div>  
             </div>
         </section>
-        <!-- I used remove.bg to remove the background from the images -->
-        <!-- I asked chat gpt: each card has a description in a p tag, but the bottom three arent complete. complete the bottom three -->
     
         <!-- Footer -->
         <footer>
@@ -191,7 +192,7 @@
                 </div>
     
                 <div class="footer-bottom">
-                    <p>© 2025 Brady Soldner Jordans. All rights reserved.</p>
+                    <p>© 2025 Jordans. All rights reserved.</p>
                     <div>
                         <p>Privacy Policy</p>
                         <p>Terms of Service</p>
@@ -199,6 +200,25 @@
                 </div>
             </div>
         </footer>
+
+        <!-- chat gave me this java script for the dark mode -->
+        <script>
+            // Get the dark mode toggle button
+            const toggleButton = document.getElementById('dark-mode-toggle');
+        
+            // Function to toggle dark mode
+            toggleButton.addEventListener('click', () => {
+                document.body.classList.toggle('dark');
+                
+                // Change the icon based on the mode
+                if (document.body.classList.contains('dark')) {
+                    toggleButton.innerHTML = '<i class="fa-solid fa-sun"></i>';  // Sun icon for light mode
+                } else {
+                    toggleButton.innerHTML = '<i class="fa-solid fa-moon"></i>';  // Moon icon for dark mode
+                }
+            });
+        </script>
+        
     
     </body>
 </html>

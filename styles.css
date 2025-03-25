@@ -1,54 +1,80 @@
-html{
-	scroll-behavior: smooth;
+html {
+    scroll-behavior: smooth;
 }
-/* I asked chat gpt: how to implement smooth scrolling */
+
+/* Below is the styling chat gave me for the dark mode */
+/* General dark mode styles */
+body.dark {
+    background-color: #1a1a1a;  /* Dark background color */
+    color: #e5e5e5;  /* Light text color */
+}
+
+/* Header dark mode */
+body.dark .header {
+    background-color: #333;  /* Dark background for header */
+    border-color: #444;  /* Darker border */
+}
+
+/* Button in dark mode */
+body.dark .bg-rose-300 {
+    background-color: #9f7aea;  /* Light purple button */
+}
+
+/* Shoe card in dark mode */
+body.dark .shoe-card-emphasize {
+    background-color: #2d2d2d;  /* Dark background for shoe cards */
+    border-color: #444;  /* Darker border for shoe cards */
+}
+
+/* Links in dark mode */
+body.dark .footer-links a {
+    color: #ccc;  /* Lighter text for links in dark mode */
+}
+
+body.dark .social-icon {
+    background-color: #444;  /* Darker background for social icons */
+}
+
+body.dark .footer-bottom {
+    color: #888;  /* Lighter footer text */
+}
+
+/* Hover scaling in dark mode */
+body.dark #similar-products a:hover,
+body.dark #chicago-style a:hover {
+    transform: scale(1.25);
+    filter: brightness(1.2);  /* Slight brightness when hovered in dark mode */
+}
+
 
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
 }
 
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
     border: 1px solid #e5e7eb;
-	font-size: 1rem;
-	position: sticky;
-	top: 0;
-    z-index: 1000; 
+    font-size: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #f4a7b9;
 }
 
 
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-}
 
-.main .main-background-video {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	opacity: 0.8;
-	z-index: -1;
-}
-
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Main Content Grid */
+/* Main Section */
 .main {
     display: grid;
-    grid-template-columns: 1fr; /* Single-column layout */
+    grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
     min-height: 90vh;
@@ -66,221 +92,179 @@ img {
     z-index: -1;
 }
 
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Product Sections Grid */
-/* #chicagos {
+#chicago-style {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive layout */
-    /* gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     padding: 40px;
     align-items: center;
- } */
+}
 
+#chicago-style > * {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
+/* Similar Products Section */
 #similar-products {
     display: grid;
-    grid-template-columns: 1fr; /* Single column layout */
-    grid-template-rows: auto 1fr; /* First row auto-sized, second row takes remaining space */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
     gap: 20px;
     padding: 20px;
+    width: 100%;
 }
 
-/* Make sure the heading spans the entire first row */
-#similar-products p {
-    grid-row: 1 / 2;
-    align-self: center; /* Align text properly */
-}
-
-/* Wrap the shoe cards in a container for grid display */
+/* Shoe container in grid */
 .shoe-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columns for the shoe cards */
     gap: 20px;
-    grid-row: 2 / 3; /* Place in the second row */
+    grid-row: 2 / 3;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1200px;
 }
 
-/* Ensure shoe cards take full height */
+/* Shoe Cards */
 .shoe-card-emphasize {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure children are aligned at the top */
+    align-items: flex-start; /* Align items to the start (top) */
+    width: 100%;
+}
+
+/* Specific image container in #similar-products */
+#similar-products .shoe-card-emphasize .overflow-hidden.h-56 {
+    height: auto; /* Allow height to adjust automatically */
+    max-height: 400px; /* Optional: set a max height */
+    overflow: hidden;
     display: grid;
-    grid-template-rows: auto 1fr auto;
-    text-align: center;
+    align-content: center;
 }
 
-/* Footer Grid */
-.footer-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    text-align: center;
-}
-
-
-
-@keyframes emphasize{
-	0% {transform: scale(1.0);}
-	50% {transform: scale(1.1);}
-	100% {transform: scale(1.0);}
-}
-
-.shoe-card-emphasize:hover img{
-	animation: emphasize 1s ease-in-out infinite;
-}
-
-
-/* Ensure the body and overall styling remain the same */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: #f4f4f4;
-}
-
-header {
-    /* background: black; */
-    color: white;
-    padding: 20px;
-}
-
-/* Apply CSS Grid to the container that holds the sections */
-main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Spacing between grid items */
-    padding: 20px;
-}
-
-/* Styling for each grid item */
-section {
-    /* background: white; */
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Ensure images are responsive within the grid */
-section img {
+#similar-products .shoe-card-emphasize .overflow-hidden.h-56 img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
 }
 
-
-
-.container {
-	width: 90%;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 20px;
+/* Image styling */
+.shoe-card-emphasize img {
+    object-fit: cover;
+    object-position: top; /* Align image at the top */
+    width: 100%; /* Full width of container */
+    height: 100%; /* Full height of container */
 }
 
+/* Footer */
 .footer-container {
-	display: flex;
-	flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
 }
 
 .footer-section {
-	margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-section-tag-line {
-	color: #aaa;
-	margin-top: 0.5rem;
+    color: #aaa;
+    margin-top: 0.5rem;
 }
 
 .footer-links h3 {
-	font-size: 1.2rem;
-	margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .footer-links ul {
-	list-style: none;
+    list-style: none;
+    padding: 0;
 }
 
 .footer-links li {
-	margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .footer-links a {
-	color: #ccc;
-	text-decoration: none;
+    color: #ccc;
+    text-decoration: none;
 }
 
+/* Social Icons */
 .social-placeholder {
-	display: flex;
-	gap: 1rem;
-	margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .social-icon {
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.social-icon:hover{
-	cursor: pointer;
+.social-icon:hover {
+    cursor: pointer;
 }
 
+/* Footer Bottom */
 .footer-bottom {
-	border-top: 1px solid #555;
-	margin-top: 2rem;
-	padding-top: 1.5rem;
-	text-align: center;
-	font-size: 0.875rem;
-	color: #aaa;
+    border-top: 1px solid #555;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #aaa;
 }
 
 .footer-bottom a {
-	color: #aaa;
-	text-decoration: none;
-	margin: 0 0.5rem;
+    color: #aaa;
+    text-decoration: none;
+    margin: 0 0.5rem;
 }
 
-
-#similar-products a:hover{
-	transform: scale(1.25);
+/* Hover Scaling */
+#similar-products a:hover,
+#chicago-style a:hover {
+    transform: scale(1.25);
 }
 
-#chicagos a:hover{
-	transform: scale(1.25);
-}
-
-
-/* Dropdown container */
+/* Dropdown Menu */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
-/* User icon circle */
 .user-icon .circle-icon {
     width: 40px;
     height: 40px;
-    border-radius: 50%; /* Circle shape */
+    border-radius: 50%;
     object-fit: cover;
     cursor: pointer;
 }
 
-/* Dropdown container */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* User icon circle */
-.user-icon .circle-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%; /* Circle shape */
-    object-fit: cover;
-    cursor: pointer;
-}
-
-/* Dropdown content (hidden by default) */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -292,7 +276,6 @@ section img {
     z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -304,13 +287,191 @@ section img {
     background-color: #ddd;
 }
 
-/* Show dropdown when hovering over the parent (icon or menu) */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Ensure the dropdown stays open when hovering over the content itself */
+.dropdown:hover .dropdown-content,
 .dropdown-content:hover {
     display: block;
 }
-/* I asked chat gpt: how do I make the a tag with the circle user in it a drop down menu */
+
+/* Animation for Shoe Cards */
+@keyframes emphasize {
+    0% { transform: scale(1.0); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1.0); }
+}
+
+.shoe-card-emphasize:hover img {
+    animation: emphasize 1s ease-in-out infinite;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(55vw); }
+}
+
+#similar-products:hover .fa-cart-shopping {
+    animation: shake 1.5s ease-in 1;
+}
+
+/* Main Layout */
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Section Styling */
+section {
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+section img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Media Queries */
+
+/* Mobile (up to 480px) */
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .main {
+        min-height: 70vh;
+    }
+
+    #chicago-style {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    #chicago-style section:first-child {
+        display: block;
+        text-align: center;
+    }
+
+    #chicago-style section:first-child img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .shoe-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    #similar-products .shoe-card-emphasize {
+        width: 100%;
+    }
+
+    #similar-products .shoe-card-emphasize .overflow-hidden.h-56 {
+        height: 10rem;
+    }
+
+    .footer-container {
+        padding: 10px;
+    }
+
+    .social-placeholder {
+        gap: 0.5rem;
+    }
+
+    .social-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .footer-links h3 {
+        font-size: 1rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.75rem;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet (481px to 767px) */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .header {
+        padding: 0.75rem;
+    }
+
+    #chicago-style {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    #chicago-style section:first-child {
+        display: block;
+        text-align: center;
+    }
+
+    #chicago-style section:first-child img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .shoe-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Desktop (768px to 1279px) */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    .header {
+        padding: 1rem;
+    }
+
+    #chicago-style {
+        grid-template-columns: 1fr 1fr;
+        padding: 40px;
+    }
+
+    #chicago-style section:first-child img.mr-40 {
+        margin-right: 0;
+    }
+
+    .shoe-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop (1280px and up) */
+@media screen and (min-width: 1280px) {
+    #similar-products .shoe-card-emphasize .overflow-hidden.h-56 {
+        height: 14rem;
+    }
+}
